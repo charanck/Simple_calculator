@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto mono", sans-serif;
+  font-weight: 550;
+}
+
+.container {
+  width: 400px;
+  height: 700px;
+  margin: auto;
+  background: #888888;
+  color: #333;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+.inputdisplay {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.input {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+.sub {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.commands {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mathfunctions {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.numbers div,
+.mathfunctions div,
+.commands div {
+  background: #333;
+  color: #f4f4f4;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 1.6rem;
+}
+
+.numbers div:hover,
+.mathfunctions div:hover,
+.commands div:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  font-weight:600;
+}
+
+input {
+  text-align: right;
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  border-width: 0;
+}
+
+input:first-child {
+  margin-bottom: 10px;
+}
+
+input{
+  box-shadow:1px 1px 2px #333;
+  background:rgb(255, 255, 255);
+}
+
+.commands .clearall,
+.commands .delete {
+  background: rgba(38, 0, 255, 0.486);
+  color: rgb(255, 255, 255);
+}
+
+.sub .mathfunctions .sum {
+  background: greenyellow;
+  color: #333;
+}
+
+.sub .mathfunctions .minus {
+  background: red;
+}
+
+.sub .mathfunctions .multiple {
+  background: forestgreen;
+}
+
+.sub .mathfunctions .divide {
+  background: rgb(255, 187, 0);
+}
+
+.input .equal {
+  background: rgb(47, 224, 255);
+}
