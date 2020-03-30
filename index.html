@@ -1,55 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" media=(max-width:768px)  href="/css/mobile.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Simple-Calculator</title>
-  </head>
-  <body>
-    <div class="container">
-
-      <!-- User input and Previous Result -->
-      <div class="inputdisplay">
-      <input type="text" name="previous" id="previousresult" disabled placeholder="Previous Result"
-      />
-      <input type="text" name="input" id="inputfield" placeholder="0" disabled />
-     </div>
-
-      <!-- Number input area -->
-      <div class="input">
-        <div class="commands">
-          <div class="squareroot">&#8730</div>
-          <div class="pi">&#928</div>
-          <div class="clearall">C</div>
-          <div class="delete">Del</div>
-        </div>
-        <div class="sub">
-        <div class="numbers">
-          <div class="seven">7</div>
-          <div class="eight">8</div>
-          <div class="nine">9</div>
-          <div class="four">4</div>
-          <div class="five">5</div>
-          <div class="six">6</div>
-          <div class="three">3</div>
-          <div class="two">2</div>
-          <div class="one">1</div>
-          <div class="zero">0</div>
-          <div class="dot">.</div>
-          <div class="equal">=</div>
-        </div>
-        <div class="mathfunctions">
-          <div class="sum">+</div>
-          <div class="minus">-</div>
-          <div class="multiple">*</div>
-          <div class="divide">/</div>
-        </div>
-      </div>
-      </div>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div id="calculator">
+    <div id="display">
+      <input disabled id="previous" placeholder="Previous">
+      <input disabled id="current" placeholder="0">
     </div>
-    <script src="/js/app.js"></script>
-  </body>
+    <div id="inputarea">
+      <div class='num' id="0">0</div>
+      <div class='num' id="1">1</div>
+      <div class='num' id="2">2</div>
+      <div class='num' id="3">3</div>
+      <div class='num' id="4">4</div>
+      <div class='num' id="5">5</div>
+      <div class='num' id="6">6</div>
+      <div class='num' id="7">7</div>
+      <div class='num' id="8">8</div>
+      <div class='num' id="9">9</div>
+      <div class='num' id="plus">+</div>
+      <div class='num' id="minus">-</div>
+      <div class='num' id="multiply">x</div>
+      <div class='num' id="divide">&#247;</div>
+      <div class='num' id="delete">DEL</div>
+      <div class='num' id="allclear">AC</div>
+      <div class='num' id="equal">=</div>
+      <div class='num' id="dot">.</div>
+    </div>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
 </html>

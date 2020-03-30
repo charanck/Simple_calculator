@@ -1,193 +1,79 @@
-//Initializing the variables
+const del = document.getElementById("delete");
+const zero = document.getElementById("0");
+const one = document.getElementById("1");
+const two = document.getElementById("2");
+const three = document.getElementById("3");
+const four = document.getElementById("4");
+const five = document.getElementById("5");
+const six = document.getElementById("6");
+const seven = document.getElementById("7");
+const eight = document.getElementById("8");
+const nine = document.getElementById("9");
+const plus = document.getElementById("plus");
+const minus = document.getElementById("minus");
+const divide = document.getElementById("divide");
+const dot = document.getElementById("dot")
+const equal = document.getElementById("equal");
+const multiply = document.getElementById("multiply");
+const allclear = document.getElementById("allclear");
+const current = document.getElementById("current");
+const previous = document.getElementById("previous");
 
-const uipreviousresult = document.getElementById('previousresult');
-const uiinputfield = document.getElementById("inputfield");
-const uisquareroot = document.querySelector(".input .commands .squareroot");
-const uipi = document.querySelector(".input .commands .pi");
-const uiclearall = document.querySelector(".clearall");
-const uidelete = document.querySelector(".delete");
-const ui7 =document.querySelector(".seven");
-const ui8 =document.querySelector(".eight");
-const ui9 =document.querySelector(".nine");
-const ui4 =document.querySelector(".four");
-const ui5 =document.querySelector(".five");
-const ui6 =document.querySelector(".six");
-const ui3 =document.querySelector(".three");
-const ui2 =document.querySelector(".two");
-const ui1 =document.querySelector(".one");
-const ui0 =document.querySelector(".zero");
-const uidot =document.querySelector(".dot");
-const uiequal =document.querySelector(".equal");
-const uisum=document.querySelector('.sum');
-const uiminus=document.querySelector('.minus');
-const uimultiple=document.querySelector('.multiple');
-const uidivide=document.querySelector('.divide');
+// input registration
 
-//Adding values to the buttons
-
-ui0.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="0"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${0}`;
-  }  
-});
-ui1.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="1"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${1}`;
-  }  
-});
-ui2.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="2"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${2}`;
-  }  
-});
-ui3.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="3"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${3}`;
-  }  
-});
-ui4.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="4"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${4}`;
-  }  
-});
-ui5.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="5"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${5}`;
-  }  
-});
-ui6.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="6"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${6}`;
-  }  
-});
-ui7.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="7"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${7}`;
-  }  
-});
-ui8.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="8"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${8}`;
-  }  
-});
-ui9.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="9"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${9}`;
-  }  
-});
-uidot.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="."; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${"."}`;
-  }  
-});
-
-//Clear,pi
-
-uiclearall.addEventListener("click",function(){
-  uipreviousresult.value=uiinputfield.value;
-  uiinputfield.value='';
-})
-
-uipi.addEventListener("click",function(){
-  if(uiinputfield.value === ''){
-    uiinputfield.value="3.14"; 
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${"3.14"}`;
-  } 
-});
-
-//Delete
-uidelete.addEventListener("click",function(){
-  if(uiinputfield.value ===""){
-    uiinputfield.value="";
-  }else{
-    let num=uiinputfield.value;
-    num =num.toString();
-    num=num.slice(0, -1);
-    num=parseInt(num);
-    console.log(num);
-    if(num===''){
-      uiinputfield.value="";
-    }else{
-      uiinputfield.value = num;
-    }
+function valueEntry(value){
+  if (typeof value == "string"){
+    let a = current.value
+    val=a.toString()
+    current.value = a + value
+    return
   }
-})
+  let a = current.value
+  val=a.toString()
+  let b = value.toString()
+  current.value = a + b
+}
 
-//Math function functionality
+zero.addEventListener("click",function(){valueEntry(0)});
+one.addEventListener("click",function(){valueEntry(1)});
+dot.addEventListener("click",function(){valueEntry('.')});
+two.addEventListener("click",function(){valueEntry(2)});
+three.addEventListener("click",function(){valueEntry(3)});
+four.addEventListener("click",function(){valueEntry(4)});
+five.addEventListener("click",function(){valueEntry(5)});
+six.addEventListener("click",function(){valueEntry(6)});
+seven.addEventListener("click",function(){valueEntry(7)});
+eight.addEventListener("click",function(){valueEntry(8)});
+nine.addEventListener("click",function(){valueEntry(9)});
+plus.addEventListener("click",function(){valueEntry('+')});
+minus.addEventListener("click",function(){valueEntry('-')});
+multiply.addEventListener("click",function(){valueEntry('*')});
+divide.addEventListener("click",function(){valueEntry('/')});
 
-//sum
-uisum.addEventListener("click",function(){
-  if(uiinputfield.value===''){
-    uiinputfield.value='';
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${'+'}`;
+
+// All clear
+allclear.addEventListener("click",function(){
+  if(current.value == 0){
+    return
   }
+  previous.value = current.value
+  current.value = 0
 })
 
-//minus
-uiminus.addEventListener("click",function(){
-  if(uiinputfield.value===''){
-    uiinputfield.value='';
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${'-'}`;
+// Delete
+del.addEventListener("click",function(){
+  let out=''
+  for(i=0;i<current.value.length-1;i++){
+    str = current.value[i].toString()
+    out += str
   }
+  current.value = out;
 })
 
-//multiply
-uimultiple.addEventListener("click",function(){
-  if(uiinputfield.value===''){
-    uiinputfield.value='';
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${'*'}`;
-  }
-})
-
-//divide
-uidivide.addEventListener("click",function(){
-  if(uiinputfield.value===''){
-    uiinputfield.value='';
-  }else{
-    uiinputfield.value=`${uiinputfield.value}${'/'}`;
-  }
-})
-
-//sqrt
-uisquareroot.addEventListener("click",function(){
-  if(uiinputfield.value !=''){
-    let base=uiinputfield.value;
-    uiinputfield.value=`${Math.pow(base,1/2)}`;
-  }
+//Calculations
+equal.addEventListener("click",function(){
+  current.value = eval(current.value)
 })
 
 
-//equal
 
-uiequal.addEventListener("click",function(){
-  let exp = uiinputfield.value;
-  if(exp){
-    uiinputfield.value=eval(exp);
-  }
-})
